@@ -1,9 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import userRoutes from "./routes/user.route.js";
 
-const dbId = "nikhilkumar7585";
-const dbPasswd = "Knikhil@128";
 dotenv.config();
 
 mongoose
@@ -19,6 +18,4 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
+app.use("/api/user", userRoutes);
