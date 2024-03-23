@@ -1,4 +1,15 @@
 import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+const dbId = "nikhilkumar7585";
+const dbPasswd = "Knikhil@128";
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => console.log("Database connected successfully"))
+  .catch((err) => console.log(err));
 
 const app = express();
 
