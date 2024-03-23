@@ -7,22 +7,24 @@ import Dashboard from "./pages/Dashboard";
 import Projects from "./pages/Projects";
 import Home from "./pages/Home";
 import Header from "./components/Header";
+import FooterCom from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
-    <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<Signin/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/sign-up" element={<Signup/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/projects" element={<Projects/>} />
+        <Route path="/sign-in" element={<Signin />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/sign-up" element={<Signup />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/projects" element={<Projects />} />
 
       </Routes>
+      <FooterCom />
     </BrowserRouter>
   );
 }
