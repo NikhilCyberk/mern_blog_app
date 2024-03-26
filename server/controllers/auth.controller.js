@@ -45,7 +45,8 @@ export const signin = async (req, res, next) => {
       res
         .status(200)
         .cookie("access_token", token, { httpOnly: true })
-        .json({ message: "Login success", user: vaildUser });
+        // .json({ message: "Login success", user: vaildUser });
+        .json(rest);
     } else {
       next(errorHandler(401, "Invalid username or password"));
     }
