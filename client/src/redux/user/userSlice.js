@@ -5,7 +5,7 @@ const initialState = {
   error: null,
   loading: false,
 };
-
+/** @type {*} */
 const userSlice = createSlice({
   name: "user",
   initialState,
